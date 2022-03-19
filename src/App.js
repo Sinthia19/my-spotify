@@ -2,12 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const API_KEY = process.env.REACT_APP_API_KEY;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          hello world 
         </p>
         <a
           className="App-link"
