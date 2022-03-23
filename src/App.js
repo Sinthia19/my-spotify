@@ -1,26 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import data from './Album/data.js';
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 function App() {
-  const API_KEY = process.env.REACT_APP_API_KEY;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          hello world 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="playlist">
+      <h1>Track Info</h1>
+      <fieldset>
+        <img src = {data.album.images[1].url}></img>
+        <h1>{data.name}</h1>
+        <h3>{data.artists[0].name} - {data.album.name}</h3>
+        <button className="btn btn-primary">Play</button>
+      </fieldset>
     </div>
-  );
+  </div>
+);
 }
 
 export default App;
