@@ -2,8 +2,8 @@
   text-align: center;
 }
 fieldset {
-  padding-top: 15px;
-  margin: 30px 30px;
+  padding-top: 25px;
+  margin: 50px 50px;
   position: relative;
   
 }
@@ -13,6 +13,7 @@ fieldset {
   border: none;
   border-radius: 6px;
   font-weight: 800;
+  cursor: pointer;
 }
 .btn-primary:active {
   position: relative;
