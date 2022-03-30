@@ -1,14 +1,17 @@
 import "./App.css";
-import Home from './home/index';
+import Auth from "./components/Auth"
 
-//const API_KEY = process.env.REACT_APP_API_KEY;
+const giphy_secret_key = process.env.REACT_APP_SPOTIFY_KEY
 
 function App() {
-  return (
-    <div className="App">
-        <Home/>
-      </div>
-  );
+return (
+  <div className="App">
+      <header className="App-header">
+          <Auth />
+          </header>
+          </div>
+);
 }
 
 export default App;
+
