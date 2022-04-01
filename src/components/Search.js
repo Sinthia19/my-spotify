@@ -18,10 +18,19 @@ const Search = ({ accessToken }) => {
     const handleOnChange = (e) => {
         setQuery(e.target.value)
     }
+
     return (
         <div className="search">
             <h4>Search Music Here... </h4>
-            <input onChange={handleOnChange} />
+            <div className="form-search">
+            <input
+            onChange={handleOnChange}
+            type="text"
+            name="text"
+            placeholder="search..."
+            required
+          />
+
             <button onClick={() => { getData(accessToken) }}>Search</button>
 
             {data !== undefined && (
@@ -29,6 +38,7 @@ const Search = ({ accessToken }) => {
             )
 
             }
+        </div>
         </div>
     )
 }

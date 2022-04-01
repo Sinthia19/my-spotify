@@ -1,5 +1,4 @@
-import data from '../data';
-import Track from '../components/track';
+import Track from '../components/Track';
 import Select from '../components/select';
 
 const albumList = data.map((d) =>
@@ -14,10 +13,8 @@ function Home() {
   return(
     <div className="Home">
       <h1>Track Playlist</h1>
-       <fieldset>
         {albumList}
-        <Select/>
-     </fieldset>
+        <Select />
     </div>
   );
 }

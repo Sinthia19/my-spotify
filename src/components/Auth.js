@@ -1,7 +1,6 @@
 import Login from "../components/Login"
 import Search from "../components/Search"
 
-
 import queryString from 'query-string';
 import { useState, useEffect } from 'react';
 
