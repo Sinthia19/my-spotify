@@ -1,7 +1,8 @@
 import "./App.css";
-import Auth from "./components/Auth"
+import Auth from "./components/Auth";
+import { getUserProfile } from "./components/formauth";
 
-const giphy_secret_key = process.env.REACT_APP_SPOTIFY_KEY
+//const giphy_secret_key = process.env.REACT_APP_SPOTIFY_KEY
 
 function App() {
 return (

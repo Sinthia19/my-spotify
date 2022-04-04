@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from 'react';
 import Track from '../components/Track'
-
+import FormPlaylist from "../components/FormPlaylist";
 
 const Search = ({ accessToken }) => {
     const [data, setData] = useState();
@@ -18,8 +18,11 @@ const Search = ({ accessToken }) => {
     const handleOnChange = (e) => {
         setQuery(e.target.value)
     }
-
+    
     return (
+        <div>
+            <FormPlaylist/>
+            <hr/>
         <div className="search">
             <h4>Search Music Here... </h4>
             <div className="form-search">
@@ -32,12 +35,11 @@ const Search = ({ accessToken }) => {
           />
 
             <button onClick={() => { getData(accessToken) }}>Search</button>
-
             {data !== undefined && (
                 <Track data={data}/>
             )
-
             }
+        </div>
         </div>
         </div>
     )

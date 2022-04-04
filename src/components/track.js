@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
+import TrackList from "../components/TrackList";
 
 
-function Track({ data }) {
-const [active, setActive] = useState(null)  
-
+const Track = ( { data } ) => {
   return (
-    <div className="App">
-    {data.map((track, index) => (
-    <div className="playlist" key={index}>
-    <img src = {track.album.images[1].url}></img>
-    <h1>{track.name}</h1>
-    <h3>{track.artists[0].name} - {track.album.name}</h3>
-    <button type="submit" onClick={() => setActive(!active)}>{ active ? 'Deselect' : 'Select'}</button>
-    </div>
-))}
-  </div>  
-  );
+          <div className="Track">
+            <div className="track-list">
+              {data.map((track, index) => (
+                <TrackList
+                  key={index}
+                  source={track.album.images[0].url}
+                  title={track.name}
+                  artist={track.artists[0].name}
+                  album={track.album.name} 
+                />
+              ))}
+            </div>
+          </div>
+        );
 }
-
-export default Track
-
+export default Track;
