@@ -1,16 +1,11 @@
 import "./App.css";
-import Auth from "./components/Auth";
-import { getUserProfile } from "./components/formauth";
-
-//const giphy_secret_key = process.env.REACT_APP_SPOTIFY_KEY
+import Home from "./Home/index"
 
 function App() {
 return (
   <div className="App">
-      <header className="App-header">
-          <Auth />
-          </header>
-          </div>
+          <Home />
+        </div>
 );
 }
 

@@ -1,5 +1,4 @@
-import Login from "../components/Login"
-import Search from "../components/Search"
+import Login from "../Home/Login"
 import queryString from 'query-string';
 import { useState, useEffect } from 'react';
 
@@ -13,19 +12,11 @@ const Auth = () => {
 
     }, [])
 
-    if (accessToken !== undefined) {
-
-        return (
-            <Search accessToken = {accessToken} />
     
-        )
-    }
-    else {
-
         return (
             <Login />
         )
-    }
+
 }
 
 export default Auth;

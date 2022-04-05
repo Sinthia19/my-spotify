@@ -1,15 +1,19 @@
 .App {
   text-align: center;
 }
-.btn {
-  padding: 12px 12px;
-  width: 50%;
-  border: none;
+.login-app {
+  width: 100%;
   border-radius: 6px;
   font-weight: 800;
+  margin-top: 50px;
+}
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 300;
   cursor: pointer;
-  margin-bottom: 12px;
-  margin-top: 10px;
+  margin : 10px 10px;
 }
 .btn-primary:active {
   position: relative;
@@ -20,6 +24,7 @@
   background-color: #32cd32;
   color: white;
 }
+
 .track-list {
   display: grid;
   justify-items: center;
@@ -30,7 +35,7 @@
 .card-playlist {
   width: 250px;
   border-radius: 8px;
-  border: 2px solid #c2d3e2;
+  border: 2px solid #abb4bd;
   padding: 14px;
   background-color: rgb(255, 255, 255);
   float: left;
@@ -38,34 +43,23 @@
 .card-playlist img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .card-playlist h3{
   font-weight: 600;
-  min-height: 58px;
 }
 .card-playlist p {
   font-weight: 300;
-}
-.search {
-  margin-top: 50px;
-}
-.login-app {
-  width: 100%;
-  border-radius: 6px;
-  font-weight: 800;
-  margin-top: 50px;
-}
-input {
-  margin-right: 8px;
+  margin : 10px 0;
 }
 .form input,
 textarea {
-  width: 25%;
+  display: inline-block;
   box-sizing: border-box;
-  padding: 10px;
-  margin: 3px 3px;
+  padding: 10px 10px;
+  margin: 8px 0;
   border-radius: 6px;
   border: 1px #bdbdbd solid;
   resize: none;
 }
+

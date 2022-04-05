@@ -1,5 +1,3 @@
-import FormPlaylist from "../components/FormPlaylist";
-
 const Login = () => {
 
     var client_id = process.env.REACT_APP_SPOTIFY_KEY
@@ -13,6 +11,7 @@ const Login = () => {
 
     return (
         <div className="login-app">
+            <p>Spotify Login Here...</p>
             <a href={url}><button type="submit" class="btn btn-primary">Login Spotify</button></a>
         </div>
     )
