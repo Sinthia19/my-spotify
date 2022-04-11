@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { searchTrack } from "../utils/fetchApi";
 
+// eslint-disable-next-line react/prop-types
 export default function SearchBar({ onSuccess, onClearSearch }) {
     const [text, setText] = useState("");
     const accessToken = useSelector((state) => state.auth.accessToken);

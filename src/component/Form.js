@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { addTracksToPlaylist, createPlaylist } from "../utils/fetchApi";
 
 
+// eslint-disable-next-line react/prop-types
 export default function FormPlaylist({ uris }) {
     const [playlist, setPlaylist] = useState({
         title: "",

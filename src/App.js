@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/react-in-jsx-scope */
 import "./App.css";
 import { useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
@@ -12,6 +14,7 @@ function App() {
    <div className="App">
     <Router>
       <Switch>
+        // eslint-disable-next-line react/react-in-jsx-scope
         <Route path="/create-playlist" exact>
           {isAuthorized ? 
           <CreatePlaylist /> : <Redirect to="/" />}

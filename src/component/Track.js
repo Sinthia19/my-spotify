@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 export default function Track({ url, title, artist, select, toggle }) {
     const [isSelected, setIsSelected] = useState(select);
     const handleSelect = () => {
