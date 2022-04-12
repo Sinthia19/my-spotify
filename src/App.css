@@ -1,7 +1,9 @@
 .App {
-  text-align: center;
+  line-height: 1.65;
+  padding-bottom: 500px;
 }
 .login-app {
+  text-align: center;
   width: 100%;
   border-radius: 6px;
   font-weight: 800;
@@ -24,13 +26,28 @@
   background-color: #32cd32;
   color: white;
 }
-
+.container-form{
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.container-track{
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  
+}
 .track-list {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 20px;
   margin: 20px 0;
+  text-align: center;
 }
 .card-playlist {
   width: 250px;
@@ -38,19 +55,30 @@
   border: 2px solid #abb4bd;
   padding: 14px;
   background-color: rgb(255, 255, 255);
-  float: left;
+  
+
 }
 .card-playlist img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  
 }
 .card-playlist h3{
-  font-weight: 600;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 .card-playlist p {
+  font-weight: 150;
+  margin: 10px 0;
+}
+.card-playlist .btn {
+  background : green;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
   font-weight: 300;
-  margin : 10px 0;
 }
 .form input,
 textarea {

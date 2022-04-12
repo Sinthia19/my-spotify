@@ -51,17 +51,15 @@ export default function CreatePlaylist() {
   
     return (
       <>
+      <div className="container-form">
         <FormPlaylist uris={selectedTrackURI} />
-  
-        <hr />
-        
+        </div>
+        <div className="container-track">
         <SearchBar
           onSuccess={(tracks) => handleSuccessSearch(tracks)}
           onClearSearch={clearSearch}
         />
-  
         {tracks.length === 0 && <p>No tracks</p>}
-  
         <div className="track-list">
           {tracks.map((track) => (
             <Track
@@ -73,6 +71,7 @@ export default function CreatePlaylist() {
               toggle={() => toggleSelect(track)}
             />
           ))}
+          </div>
         </div>
       </>
     );
