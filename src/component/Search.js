@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { searchTrack } from "../utils/fetchApi";
+import {  TextField } from '@mui/material';
+import { Button } from '@mui/material';
 
 // eslint-disable-next-line react/prop-types
 export default function SearchBar({ onSuccess, onClearSearch }) {
@@ -24,20 +26,25 @@ export default function SearchBar({ onSuccess, onClearSearch }) {
         setText("");
         onClearSearch();
     };
+    const buttonStyle = {margin : "5px 10px "}
     return (
         <div className="search-wrapper">
             <form className="form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <input
+                    <TextField 
                         type="text"
                         name="query"
-                        placeholder="Search..."
+                        label="search..."
+                        variant="outlined"
                         onChange={handleInput}
                         required
                         value={text}
                     />
-                    <button className="btn btn-primary">Search..</button>
-                </div>
+                  <Button style={buttonStyle}
+                    type="submit"
+                    variant="contained"
+                    size="small">
+                      Search
+                  </Button> 
             </form>
             <button className="btn btn-text" onClick={clearSearch}>
                 Clear Search

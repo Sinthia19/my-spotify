@@ -9,22 +9,10 @@
   font-weight: 800;
   margin-top: 50px;
 }
-.btn {
+.Button {
   padding: 6px 12px;
-  border: none;
-  border-radius: 6px;
-  font-weight: 300;
   cursor: pointer;
   margin : 10px 10px;
-}
-.btn-primary:active {
-  position: relative;
-  top: 2px;
-  box-shadow: none;
-}
-.btn-primary {
-  background-color: #32cd32;
-  color: white;
 }
 .container-form{
   max-width: 900px;
@@ -90,4 +78,3 @@ textarea {
   border: 1px #bdbdbd solid;
   resize: none;
 }
-

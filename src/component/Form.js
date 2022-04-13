@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { addTracksToPlaylist, createPlaylist } from "../utils/fetchApi";
+import { Container, Typography } from "@mui/material";
+import {  TextField } from '@mui/material';
+import { Button } from '@mui/material';
 
 
 // eslint-disable-next-line react/prop-types
@@ -49,36 +52,45 @@ export default function FormPlaylist({ uris }) {
             alert("Title must be at least 10 characters long.");
         }
     };
-
+    const formStyle = {margin : "10px 10px"}
     return (
-        <div className="form-playlist">
-            <h3>Create New Playlist</h3>
-            <form className="form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="title">Title : </label>
-                    <input
-                        type="text"
-                        name="title"
-                        id="title"
-                        value={playlist.title}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="desc">Desc : </label>
-                    <textarea
-                        id="desc"
-                        name="description"
-                        value={playlist.description}
-                        onChange={handleChange}
-                        required
-                    ></textarea>
-                </div>
-                <button className="btn btn-primary" type="submit">
-                    Submit
-                </button>
+        <Container>
+            <Typography
+              variant="h6"
+              color="textSecondary"
+              component="h2"
+              gutterBottom
+              >
+                  Create a New Playlist
+              </Typography>
+            <form noValidate autoComplete="off" onSubmit={handleSubmit} style={formStyle}>
+                  <TextField
+                    id="title"
+                    onChange={handleChange}
+                    value={playlist.title}
+                    label="Title"
+                    variant="outlined"
+                    fullWidth
+                    required
+                  />
+                  <TextField
+                    id="desc"
+                    onChange={handleChange}
+                    value={playlist.description}
+                    label="Description"
+                    variant="outlined"
+                    fullWidth
+                    required
+                  />
+                <Button style={formStyle}
+                  type="submit"
+                  variant="contained"
+                  size="small">
+                      Submit
+                  </Button> 
             </form>
-        </div>
+            </Container>
           );
         }
+
+    
