@@ -1,18 +1,22 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { RootStateOrAny, useSelector } from "react-redux";
 import { searchTrack } from "../utils/fetchApi";
 import {  TextField } from '@mui/material';
 import { Button } from '@mui/material';
 
-// eslint-disable-next-line react/prop-types
-export default function SearchBar({ onSuccess, onClearSearch }) {
-    const [text, setText] = useState("");
-    const accessToken = useSelector((state) => state.auth.accessToken);
+type SearchBarProps = {
+    onSuccess: (tracks: any) => void,
+    onClearSearch: () => void
+}
 
-    const handleInput = (e) => {
+export default function SearchBar({ onSuccess, onClearSearch }: SearchBarProps) {
+    const [text, setText] = useState("");
+    const accessToken = useSelector((state: RootStateOrAny) => state.auth.accessToken);
+
+    const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setText(e.target.value);
     };
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e:React.FormEvent<HTMLFormElement> ) => {
         e.preventDefault();
         try {
             const responseSearch = await searchTrack(text, accessToken);

@@ -1,6 +1,6 @@
-import config from "../utils/config";
+import config from "./config";
 
-export const searchTrack = async (query, accessToken) => {
+export const searchTrack = async (query: string, accessToken: string) => {
     const requestOptions = {
         headers: {
             Authorization: "Bearer " + accessToken,
@@ -16,7 +16,7 @@ export const searchTrack = async (query, accessToken) => {
     return response;
 };
 
-export const getUserProfile = async (accessToken) => {
+export const getUserProfile = async (accessToken: string) => {
     const requestOptions = {
         headers: {
             Authorization: "Bearer " + accessToken,
@@ -32,10 +32,14 @@ export const getUserProfile = async (accessToken) => {
     return response;
 };
 
+type CreateProps = {
+    name: string,
+    description: string
+}
 export const createPlaylist = async (
-    accessToken,
-    userId,
-    { name, description }
+    accessToken: string,
+    userId: string,
+    { name, description}: CreateProps
 ) => {
     const data = JSON.stringify({
         name,
@@ -61,7 +65,7 @@ export const createPlaylist = async (
     return response;
 };
 
-export const addTracksToPlaylist = async (accessToken, playlistId, uris) => {
+export const addTracksToPlaylist = async (accessToken: string, playlistId: string, uris: string) => {
     const data = JSON.stringify({
         uris,
     });
