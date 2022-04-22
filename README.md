@@ -1,19 +1,20 @@
 
-# Name : My Spotify Music
+# My Spotify Music
 
 ## Description
 
 <br>
-<img src="public/images/page1.png" width="120px">
+<img src="public/images/page1.png" width="100%">
 This is Spotify clone app that used Spotify Developers API. Spotify clone enables users to share their favorite songs, detail tracks, create a new playlist, and select and deselect songs
 <br>
 
 ### Features
-*Login 
-*Create new playlist
-*Search tracks
-*Tracks Detail
-*Select and Deselect playlist
+**Login** 
+<br> <img src="public/images/page1.png" width="180px">
+**Create new playlist**
+**Search tracks**
+**Tracks Detail**
+**Select and Deselect playlist**
 
 ## How to use this App
 
