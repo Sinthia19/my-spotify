@@ -9,16 +9,10 @@ This is Spotify clone app that used Spotify Developers API. Spotify clone enable
 <br>
 
 ### Features
-- Login
-<div id="header" align="left">
-  <img src="public/images/page1-1.png"/>
-</div>
-- Create a new playlist
-<div id="header" align="left">
-  <img src="public/images/page1-1.png"/>
-</div>
-**Search tracks**
-**Tracks Detail**
+- Login <img src="public/images/page1-1.png"/>
+- Create a new playlist <img src="public/images/page-createPlaylist.png"/>
+- Search Songs <img src="public/images/page-search.png"/>
+- Tracks Detail
 **Select and Deselect playlist**
 
 ## How to use this App
