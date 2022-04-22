@@ -9,10 +9,10 @@ This is Spotify clone app that used Spotify Developers API. Spotify clone enable
 <br>
 
 ### Features
-- Login 
+- Login to Spotify Music
 - Create a new playlist
 - Search Songs
-- Tracks Detail
+- Tracks Details ( title, srtists, and duration )
 - Select and Deselect playlist
 
 ## How to use this App
@@ -27,26 +27,27 @@ Search the song and click button search, and the result will appear.
  <img src="public/images/page-search.png"/>
 5. Track Detail
 The track will show the title, the artist and the duration of the song.
-<img src="public/images/track.png"/>
+<img src="public/images/page-track.png"/>
 6. Select and Deselect
 The song that selected will be add on a new playlist
 <img src="public/images/page-select.png"/>
 
 ## How to instal and use
-*Clone the project
-*Go to the project app
+
+* Clone the project
+   ```
+   git clone https://github.com/Sinthia19/my-spotify.git
+   ```
+* Go to the project files name
    ```
    cd my-spotify
    ```
-*Install dependencies
+* Install dependencies
    ```
    npm install
    ```
-*Start the server
+* Start the server
     ```
     npm start
     ```
-*Start server
-   ```
-   http://localhost:3000/
-   ```
+
