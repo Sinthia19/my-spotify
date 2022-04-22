@@ -32,14 +32,10 @@ export const getUserProfile = async (accessToken: string) => {
     return response;
 };
 
-type CreateProps = {
-    name: string,
-    description: string
-}
 export const createPlaylist = async (
     accessToken: string,
     userId: string,
-    { name, description}: CreateProps
+    { name, description }: { name: string; description: string}
 ) => {
     const data = JSON.stringify({
         name,
@@ -65,7 +61,7 @@ export const createPlaylist = async (
     return response;
 };
 
-export const addTracksToPlaylist = async (accessToken: string, playlistId: string, uris: string) => {
+export const addTracksToPlaylist = async (accessToken: string, playlistId: string, uris: string[] ) => {
     const data = JSON.stringify({
         uris,
     });

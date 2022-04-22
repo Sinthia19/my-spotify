@@ -4,11 +4,11 @@ import { getUserProfile } from "../utils/fetchApi";
 import { useDispatch } from "react-redux";
 import { login } from "../utils/authSlice";
 import { useHistory } from "react-router-dom";
-
+import { Link, Button, Flex, Heading, Image } from '@chakra-ui/react';
 
 export default function Login() {
-    const dispatch = useDispatch();
-    const history = useHistory();
+    const dispatch = useDispatch<any>();
+    const history = useHistory<any>();
   
     useEffect(() => {
       const params = new URLSearchParams(window.location.hash);
@@ -33,7 +33,7 @@ export default function Login() {
       }
     }, []);
   
-    const getSpotifyLinkAuthorize = () => {
+    const getSpotifyLinkAuthorize: () => string = () => {
       const state = Date.now().toString();
       // eslint-disable-next-line no-undef
       const clientId = process.env.REACT_APP_SPOTIFY_KEY;
@@ -42,9 +42,35 @@ export default function Login() {
     };
   
     return (
-      <div className="login-app">
-        <p>Spotify Login Here...</p>
-        <a href={getSpotifyLinkAuthorize()}><button type="submit" className="btn btn-primary">Login Spotify</button></a>
-      </div>
+      <Flex 
+        justifyContent="center" 
+        alignItems="center" h="calc(100vh - 80px)"
+      > 
+      <Flex 
+        flexDir="column"
+        width="auto"
+        alignItems="center"
+      >
+      <Image 
+        borderRadius="full" 
+        boxSize="100px" 
+        objectFit="cover" 
+        src="https://www.protocol.com/media-library/spotify.png?id=29171621&width=1245&quality=85&coordinates=0%2C0%2C0%2C0&height=700"
+      />   
+      <Heading mb={4}>Welcome to Spotify Music</Heading> 
+        <Link href={getSpotifyLinkAuthorize()}>
+          <Button 
+             type="submit" 
+             size="lg" 
+             colorScheme="green"
+             border="2px"
+          >
+            Login Spotify
+          </Button>
+        </Link>
+     
+        </Flex>
+      </Flex>
+     
     );
   }
